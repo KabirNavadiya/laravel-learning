@@ -1,0 +1,71 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Learning Laravel API",
+        "description": "API Documentation for Learning Laravel",
+        "contact": {
+            "name": "API Support",
+            "email": "support@learninglaravel.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/",
+            "description": "API Server"
+        }
+    ],
+    "paths": {
+        "/api/v1/welcome": {
+            "get": {
+                "tags": [
+                    "Welcome"
+                ],
+                "summary": "Welcome endpoint",
+                "description": "Returns a welcome message for API version 1",
+                "operationId": "cc57863d21c9a24f24f8fa5ee1ef6ef1",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Welcome to Chance Your Arm API - v1"
+                                        },
+                                        "data": {
+                                            "type": "null",
+                                            "example": null
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Welcome",
+            "description": "Welcome"
+        }
+    ]
+}

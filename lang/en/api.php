@@ -15,4 +15,8 @@ return [
     // common API Responses.
 
     'welcome_message' => 'Welcome to Laravel Learning API',
+
+    'user' => [
+        'registered' => 'User registered successfully',
+    ],
 ];
